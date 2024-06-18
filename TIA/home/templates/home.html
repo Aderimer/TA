@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css %}
+{% endblock %}
+
+{% block head %}
+{% endblock %}
+
+{% block content %}
+<div class="post-cards-wrapper">
+    {% for posts in posts %}
+    <h1>{{ posts.tittel }}</h1>
+    <p>{{ posts.beskrivelse }}</p>
+    <img src="{{ posts.bilde.url }}">
+    {% endfor %}
+</div>
+{% endblock %}

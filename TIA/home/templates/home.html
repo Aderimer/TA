@@ -5,14 +5,21 @@
 {% endblock %}
 
 {% block head %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}"/>
 {% endblock %}
 
 {% block content %}
+
+{% include 'profil-kort.html' %}
+
+
 <div class="post-cards-wrapper">
     {% for posts in posts %}
-    <h1>{{ posts.tittel }}</h1>
-    <p>{{ posts.beskrivelse }}</p>
-    <img src="{{ posts.bilde.url }}">
+    <div class="post-card">
+        <h1>{{ posts.tittel }}</h1>
+        <p>{{ posts.beskrivelse }}</p>
+        <img src="{{ posts.bilde.url }}" width="{{ posts.lengde }}" height="{{ posts.høyde }}">
+    </div>
     {% endfor %}
 </div>
 {% endblock %}

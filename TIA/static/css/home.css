@@ -1,0 +1,30 @@
+body {
+    overflow-x: hidden;
+    font-family:"Roboto Mono", 'Arial','Helvetica';
+}
+
+.post-cards-wrapper {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 10px;
+    margin: 20px;
+    height: auto;
+    width: auto;
+    /* Experimental */
+}
+
+.post-card {
+    padding: 20px;
+    margin: 10px;
+    border: dotted red;
+}
+
+@media screen and (max-width: 800px) {
+    img {
+        width: 100%;
+        height: 50%;
+    }
+}

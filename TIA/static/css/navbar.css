@@ -1,0 +1,28 @@
+body {
+    overflow-x: hidden;
+    font-family:"Roboto Mono", 'Arial','Helvetica';
+}
+
+.navbar {
+    display: flex;
+    position: static;
+    top:0px;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border: white solid;
+}
+
+.navbar-knapp {
+    margin: 15px;
+    padding: 20px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    height: 100%;
+    width: 10%;
+}
+
+.navbar-knapp:hover {
+    cursor: grab;
+}

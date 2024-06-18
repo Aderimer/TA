@@ -1,0 +1,9 @@
+<div class="test-card">
+        <h1>{{ profil.navn }}</h1>
+        {% if tlf in Profil != None %}
+            <h2>+47{{ profil.tlf }}</h2>
+        {% endif %}
+        <img src="{{ profil.bilde.url }}"/>
+        <p>{{ profil.kamera_navn }}</p>
+        <p>{{ profil.kamera_detaljer }}</p>
+</div>

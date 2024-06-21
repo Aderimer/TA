@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+    <title>{{bilde.tittel}} | {{bilde.dato}}</title>
+    <link rel="stylesheet" href="{% static 'css/showcase.css' %}"/>
+{% endblock %}
+
+{% block content %}
+<div class="img-container">
+    <img src="{{bilde.bilde.url}}" height="auto" width="auto"/>
+</div>
+{% endblock %}

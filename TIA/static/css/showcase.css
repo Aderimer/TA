@@ -1,0 +1,28 @@
+body {
+    background-color: black;
+}
+
+.navbar-knapp {
+    color: black !important;
+    background-color: white !important;
+}
+
+img {
+    image-rendering: optimizeQuality;
+    max-width: 110vh;
+    max-height: 80vh;
+    box-shadow: 0px 0px 10px white;
+}
+
+.img-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 800px) {
+    img {
+        max-width: 70vh;
+        max-height: 90%;
+    }
+}

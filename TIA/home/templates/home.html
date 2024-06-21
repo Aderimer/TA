@@ -15,11 +15,26 @@
 
 <div class="post-cards-wrapper">
     {% for posts in posts %}
-    <div class="post-card">
-        <h1>{{ posts.tittel }}</h1>
-        <p>{{ posts.beskrivelse }}</p>
-        <img src="{{ posts.bilde.url }}" width="{{ posts.lengde }}" height="{{ posts.høyde }}">
-    </div>
+        <div class="post-card">
+            <a class="post-card" href="{% url 'bilde' posts.id %}">
+                <h1>{{ posts.tittel }}</h1>
+                <img id="image" src="{{ posts.bilde.url }}" width="
+                {% if bilde.portrett_eller_horizontal == True %}
+                    500"
+                {% else %}
+                    350"
+                {% endif %}
+                height="
+                {% if bilde.portrett_eller_horizontal == True %}
+                    350"
+                {% else %}
+                    500"
+                {% endif %}
+                {{ posts.høyde }}%">
+            </a>
+        </div>
     {% endfor %}
+
+
 </div>
 {% endblock %}

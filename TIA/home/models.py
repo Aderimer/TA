@@ -12,10 +12,13 @@ class Post(models.Model):
     bilde = models.ImageField(upload_to='uploads/')
     dato = models.DateTimeField(default=datetime.datetime.today)
     # Bilde innstillinger:
-    lengde = models.IntegerField(default=500)
-    høyde = models.IntegerField(default=500)
-    lengde_showcase = models.IntegerField(default=1000)
-    høyde_showcase = models.IntegerField(default=1000)
+    lengde = models.IntegerField(default=50)
+    høyde = models.IntegerField(default=50)
+    lengde_showcase_auto = models.BooleanField(default=False)
+    lengde_showcase = models.IntegerField(default=1000, null=True)
+    portrett_eller_horizontal = models.BooleanField(default=False)
+    høyde_showcase_auto = models.BooleanField(default=False)
+    høyde_showcase = models.IntegerField(default=1000, null=True)
 
     def __str__(self):
         return self.tittel

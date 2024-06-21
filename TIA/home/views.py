@@ -4,10 +4,14 @@ from home.models import Post, Profil
 from .forms import KontaktForm
 
 # Create your views here.
+def bilde(request, pk):
+    bilde = Post.objects.get(id=pk)
+    return render(request, 'showcase.html', {'bilde':bilde})
+
 def home(request):
     posts = Post.objects.all()
     profil = Profil.objects.all()
-    return render(request, 'home.html', {'posts':posts, 'profil':profil})
+    return render(request, 'home.html', {'posts':posts, 'profil':profil, 'bilde':bilde})
 
 def kontakt(request):
     form = KontaktForm

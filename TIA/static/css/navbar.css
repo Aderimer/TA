@@ -27,3 +27,9 @@ body {
 .navbar-knapp:hover {
     cursor: grab;
 }
+
+@media screen and (max-width: 1080px) {
+    .navbar-knapp {
+        width: 15%;
+    }
+}

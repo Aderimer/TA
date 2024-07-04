@@ -21,8 +21,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2px;
-    margin: 2px;
+    position: relative;
+    left: -3px;
+    margin: 1px;
     height: 20%;
 }
 
@@ -39,9 +40,6 @@ body {
         align-items: center;
     }
     
-    .post-card > img {
-        filter: blur(0) !important;
-    }
 
 }
 
@@ -52,13 +50,12 @@ body {
 }
 
 .post-card > img {
-    filter: blur(2px);
-    transition: all 0.5s ease-out;
+    transition: all 0.15s ease-in-out;
+    object-fit: cover;
 }
 
-.post-card > img:hover, h1:hover {
-    filter: blur(0px);
-    transform: scale(105%);
+.post-card > img:hover {
+    transform: scale(1.02);
 }
 
 a {

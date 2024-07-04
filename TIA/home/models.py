@@ -36,6 +36,7 @@ class Profil(models.Model):
 
 class Kontakt(models.Model):
     sender = models.CharField(max_length=50, default='Navn', blank=False, null=False)
+    email = models.CharField(max_length=70, default='Email', blank=False, null=False)
     melding = models.TextField(max_length=2500, default='Melding', blank=False, null=False)
 
     def __str__(self):

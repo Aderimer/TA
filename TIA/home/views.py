@@ -14,7 +14,7 @@ def home(request):
     return render(request, 'home.html', {'posts':posts, 'profil':profil, 'bilde':bilde})
 
 def kontakt(request):
-    form = KontaktForm
+    form = KontaktForm(auto_id="id_for_%s")
     if request.method == "POST":
         form = KontaktForm(request.POST)
         if form.is_valid():

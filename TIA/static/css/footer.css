@@ -21,7 +21,47 @@ body {
     height: 100px;
 }
 
+.footer-link {
+    cursor: grab;
+    text-decoration: underline;
+    color: inherit;
+}
+
 
 .legal {
     width: 500px;
+}
+
+.footer-button {
+    border: none;
+    font-size: medium;
+    font-weight: bold;
+    height: 40px;
+    width: 40px;
+}
+
+@media screen and (max-width: 1080px) {
+    .footer {
+        font-size: 8px;
+        height: 60px;
+    }
+
+    .legal {
+        max-width: 60vw;
+        object-fit: contain;
+        overflow: scroll;
+    }
+
+    .footer-button {
+        transform: scale(0.5);
+        position: relative;
+        right: 80px;
+        transition: all 0.2s ease-out;
+    }
+
+    .footer-button:hover {
+        transform: scale(0.6);
+        cursor: grab;
+    }
+    
 }

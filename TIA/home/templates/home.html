@@ -17,7 +17,7 @@
     {% for posts in posts %}
         <div class="post-card">
             <a class="post-card" href="{% url 'bilde' posts.id %}">
-                <h1>{{ posts.tittel }}</h1>
+                <!--<h1>{{ posts.tittel }}</h1>-->
                 <img id="image" src="{{ posts.bilde.url }}" width="
                 {% if bilde.portrett_eller_horizontal == True %}
                     500"
